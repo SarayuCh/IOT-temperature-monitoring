@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>Temperature Dashboard</h1>
+</header>
+
+<nav>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="graph.html">Graph</a>
+    <a href="history.html">History</a>
+    <a href="alerts.html">Alerts</a>
+    <a href="index.html">Logout</a>
+</nav>
+
+<div class="container">
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>Temperature</h3>
+            <div class="value">
+                <span id="temperature">25.0</span> °C
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>Status</h3>
+            <div id="status" class="status normal">Normal</div>
+        </div>
+
+        <div class="card">
+            <h3>Safe Threshold</h3>
+            <div class="value">35 °C</div>
+        </div>
+
+        <div class="card">
+            <h3>Simulation</h3>
+            <div class="value" id="simulationStatus">OFF</div>
+        </div>
+
+    </div>
+
+    <div class="controls">
+
+        <h2>Simulation Control</h2>
+
+        <button class="start" onclick="startSimulation()">Start</button>
+
+        <button class="stop" onclick="stopSimulation()">Stop</button>
+
+        <button class="restart" onclick="restartSimulation()">Restart</button>
+
+        <button class="low" onclick="generateLowTemperature()">Low</button>
+
+        <button class="normal-btn" onclick="generateNormalTemperature()">Normal</button>
+
+        <button class="high" onclick="generateHighTemperature()">High</button>
+
+    </div>
+
+    <div class="alert">
+        <h3>Alert</h3>
+        <p id="alertMessage">System is operating normally.</p>
+    </div>
+
+</div>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
